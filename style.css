@@ -1,0 +1,113 @@
+:root {
+    --black-purple: #2E2D31;
+    --dark-purple: #5D44AB;
+    --purple-rouge: #7654B4;
+    --damp-purple: #0E002C;
+    --light-purple: #967ECB;
+    --footer-purple: #654C8C; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.far-away-module {
+    width: 100vw;
+    background-color: var(--black-purple);
+    text-align: center;
+    color: white;
+}
+
+.four-squares {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.four-squares__planet {
+    background-color: var(--dark-purple);
+}
+
+.four-squares__helmet {
+    background-color: var(--purple-rouge);
+}
+
+.four-squares__lasergun {
+    background-color: var(--light-purple);
+}
+
+.four-squares__rocket {
+    background-color: var(--damp-purple);
+}
+
+/* main styling  */
+
+.hero {
+    height: 12.5rem;
+    background: linear-gradient(to bottom, rgba(157, 20, 255, 0.669), rgba(157, 40, 240, 0.669));
+}
+.main-space-module {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.main-space-module__space-squares {
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "satelite planet"
+    "far-away far-away";
+}
+
+.main-space-module-space-squares--light-purple {
+    background-color: var(--light-purple);
+    grid-area: satelite;
+}
+.main-space-module-space-squares--dark-purple {
+    background-color: var(--dark-purple);
+    grid-area: planet;
+}
+
+.main-space-module-space-squares--damp-purple{
+  background-color: var(--damp-purple);
+  color: white;
+  grid-area: far-away;
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-space-module__constellation {
+    background-color: var(--black-purple);
+}
+  
+.contact-form {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-form {
+        display: block;
+    }
+    
+    header {
+       flex-wrap: nowrap;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+}
